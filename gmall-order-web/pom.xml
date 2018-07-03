@@ -20,14 +20,14 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
+			<groupId>com.qishuiqing.gmall</groupId>
+			<artifactId>gmall-interface</artifactId>
+			<version>1.0-SNAPSHOT</version>
 		</dependency>
-
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
+			<groupId>com.qishuiqing.gmall</groupId>
+			<artifactId>gmall-web-util</artifactId>
+			<version>1.0-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 

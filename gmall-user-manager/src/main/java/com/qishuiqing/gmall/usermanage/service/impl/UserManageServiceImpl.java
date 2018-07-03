@@ -1,12 +1,12 @@
 package com.qishuiqing.gmall.usermanage.service.impl;
 
-import com.qishuiqing.gmall.usermanage.bean.UserAddress;
-import com.qishuiqing.gmall.usermanage.bean.UserInfo;
+import com.alibaba.dubbo.config.annotation.Service;
+import com.qishuiqing.gmall.bean.usermanage.UserAddress;
+import com.qishuiqing.gmall.bean.usermanage.UserInfo;
+import com.qishuiqing.gmall.service.usermanage.UserManageService;
 import com.qishuiqing.gmall.usermanage.mapper.UserAddressMapper;
 import com.qishuiqing.gmall.usermanage.mapper.UserInfoMapper;
-import com.qishuiqing.gmall.usermanage.service.UserManageService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import tk.mybatis.mapper.entity.Example;
 
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.List;
  * Created by Administrator on 2018/6/30 0030.
  */
 @Service
-public class UserManageServiceImpl implements UserManageService{
+public class UserManageServiceImpl implements UserManageService {
 
     @Autowired
     UserInfoMapper userInfoMapper;

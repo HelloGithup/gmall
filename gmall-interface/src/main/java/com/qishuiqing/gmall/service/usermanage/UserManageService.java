@@ -1,7 +1,7 @@
-package com.qishuiqing.gmall.usermanage.service;
+package com.qishuiqing.gmall.service.usermanage;
 
-import com.qishuiqing.gmall.usermanage.bean.UserAddress;
-import com.qishuiqing.gmall.usermanage.bean.UserInfo;
+import com.qishuiqing.gmall.bean.usermanage.UserAddress;
+import com.qishuiqing.gmall.bean.usermanage.UserInfo;
 
 import java.util.List;
 

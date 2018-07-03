@@ -1,6 +1,6 @@
 package com.qishuiqing.gmall.usermanage.mapper;
 
-import com.qishuiqing.gmall.usermanage.bean.UserAddress;
+import com.qishuiqing.gmall.bean.usermanage.UserAddress;
 import tk.mybatis.mapper.common.Mapper;
 
 /**

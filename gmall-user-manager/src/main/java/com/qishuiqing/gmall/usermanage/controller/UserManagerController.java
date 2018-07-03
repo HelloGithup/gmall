@@ -1,7 +1,7 @@
 package com.qishuiqing.gmall.usermanage.controller;
 
-import com.qishuiqing.gmall.usermanage.bean.UserInfo;
-import com.qishuiqing.gmall.usermanage.service.UserManageService;
+import com.qishuiqing.gmall.bean.usermanage.UserInfo;
+import com.qishuiqing.gmall.service.usermanage.UserManageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
