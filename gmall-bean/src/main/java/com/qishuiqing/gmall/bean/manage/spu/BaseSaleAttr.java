@@ -1,18 +1,18 @@
-package com.qishuiqing.gmall.bean.manage;
+package com.qishuiqing.gmall.bean.manage.spu;
 
 import javax.persistence.Column;
 import javax.persistence.Id;
 import java.io.Serializable;
 
 /**
- * Created by Administrator on 2018/7/3 0003.
+ * Created by Administrator on 2018/7/5 0005.
  */
-public class BaseCatalog1 implements Serializable{
+public class BaseSaleAttr implements Serializable{
     @Id
     @Column
-    private String id;
+    String id ;
     @Column
-    private String name;
+    String name;
 
     public String getId() {
         return id;

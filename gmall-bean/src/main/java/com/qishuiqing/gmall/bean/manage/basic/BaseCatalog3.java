@@ -1,4 +1,4 @@
-package com.qishuiqing.gmall.bean.manage;
+package com.qishuiqing.gmall.bean.manage.basic;
 
 import javax.persistence.Column;
 import javax.persistence.Id;

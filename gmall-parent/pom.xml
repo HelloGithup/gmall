@@ -15,6 +15,8 @@
         <module>../gmall-bean</module>
         <module>../gmall-user-manager</module>
         <module>../gmall-order-web</module>
+        <module>../gmall-manage-service</module>
+        <module>../gmall-manage-web</module>
     </modules>
     <packaging>pom</packaging>
 

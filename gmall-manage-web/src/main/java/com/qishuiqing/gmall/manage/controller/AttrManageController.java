@@ -1,13 +1,11 @@
 package com.qishuiqing.gmall.manage.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
-import com.qishuiqing.gmall.bean.manage.BaseAttrInfo;
-import com.qishuiqing.gmall.bean.manage.BaseCatalog1;
-import com.qishuiqing.gmall.bean.manage.BaseCatalog2;
-import com.qishuiqing.gmall.bean.manage.BaseCatalog3;
+import com.qishuiqing.gmall.bean.manage.basic.*;
 import com.qishuiqing.gmall.service.usermanage.ManageService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -22,6 +20,11 @@ public class AttrManageController {
 
     @Reference
     ManageService manageService;
+
+    @RequestMapping("index")
+    public String index(){
+        return "index";
+    }
 
     @RequestMapping("attrListPage")
     public String getAttrListPage(){
@@ -72,12 +75,29 @@ public class AttrManageController {
      * @param map
      * @return
      */
-    @RequestMapping("getAttrList")
+    @RequestMapping("attrInfoList")
     @ResponseBody
     public List<BaseAttrInfo>  getAttrList(@RequestParam Map<String,String> map){
         String catalog3Id =   map.get("catalog3Id") ;
         List<BaseAttrInfo> attrList = manageService.getAttrList(catalog3Id);
         return attrList;
     }
+
+    @RequestMapping(value = "getAttrValueList",method = RequestMethod.POST)
+    @ResponseBody
+    public List<BaseAttrValue> getAttrValueList(@RequestParam Map<String,String> map){
+        String attrId= map.get("attrId");
+        BaseAttrInfo attrInfo = manageService.getAttrInfo(attrId);
+        return attrInfo.getAttrValueList();
+    }
+
+    @RequestMapping(value = "saveAttrInfo",method = RequestMethod.POST)
+    @ResponseBody
+    public String saveAttrInfo(BaseAttrInfo baseAttrInfo){
+        manageService.saveAttrInfo(baseAttrInfo);
+        return "success";
+    }
+
+
 
 }

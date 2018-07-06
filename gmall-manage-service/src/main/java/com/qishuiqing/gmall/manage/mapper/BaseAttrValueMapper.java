@@ -1,6 +1,6 @@
 package com.qishuiqing.gmall.manage.mapper;
 
-import com.qishuiqing.gmall.bean.manage.BaseAttrValue;
+import com.qishuiqing.gmall.bean.manage.basic.BaseAttrValue;
 import tk.mybatis.mapper.common.Mapper;
 
 /**

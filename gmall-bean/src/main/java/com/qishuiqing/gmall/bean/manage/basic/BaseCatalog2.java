@@ -1,6 +1,8 @@
-package com.qishuiqing.gmall.bean.manage;
+package com.qishuiqing.gmall.bean.manage.basic;
 
 import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.io.Serializable;
 
@@ -10,6 +12,7 @@ import java.io.Serializable;
 public class BaseCatalog2 implements Serializable{
     @Id
     @Column
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
     @Column
     private String name;

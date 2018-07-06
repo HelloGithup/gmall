@@ -1,6 +1,6 @@
 package com.qishuiqing.gmall.manage.mapper;
 
-import com.qishuiqing.gmall.bean.manage.BaseCatalog3;
+import com.qishuiqing.gmall.bean.manage.basic.BaseCatalog3;
 import tk.mybatis.mapper.common.Mapper;
 
 /**

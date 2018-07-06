@@ -1,8 +1,8 @@
-package com.qishuiqing.gmall.bean.manage;
+package com.qishuiqing.gmall.bean.manage.basic;
 
-import javax.persistence.Column;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * Created by Administrator on 2018/7/3 0003.
@@ -10,13 +10,15 @@ import java.io.Serializable;
 public class BaseAttrInfo implements Serializable{
     @Id
     @Column
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
     @Column
     private String attrName;
     @Column
     private String catalog3Id;
-    @Column
-    private String isEnabled;
+
+    @Transient
+    private List<BaseAttrValue> attrValueList;
 
     public String getId() {
         return id;
@@ -42,11 +44,11 @@ public class BaseAttrInfo implements Serializable{
         this.catalog3Id = catalog3Id;
     }
 
-    public String getIsEnabled() {
-        return isEnabled;
+    public List<BaseAttrValue> getAttrValueList() {
+        return attrValueList;
     }
 
-    public void setIsEnabled(String isEnabled) {
-        this.isEnabled = isEnabled;
+    public void setAttrValueList(List<BaseAttrValue> attrValueList) {
+        this.attrValueList = attrValueList;
     }
 }

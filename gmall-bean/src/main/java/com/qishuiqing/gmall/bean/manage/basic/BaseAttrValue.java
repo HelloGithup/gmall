@@ -1,4 +1,4 @@
-package com.qishuiqing.gmall.bean.manage;
+package com.qishuiqing.gmall.bean.manage.basic;
 
 import javax.persistence.Column;
 import javax.persistence.Id;
@@ -15,8 +15,6 @@ public class BaseAttrValue implements Serializable{
     private String valueName;
     @Column
     private String attrId;
-    @Column
-    private String isEnabled;
 
     public String getId() {
         return id;
@@ -42,11 +40,4 @@ public class BaseAttrValue implements Serializable{
         this.attrId = attrId;
     }
 
-    public String getIsEnabled() {
-        return isEnabled;
-    }
-
-    public void setIsEnabled(String isEnabled) {
-        this.isEnabled = isEnabled;
-    }
 }
